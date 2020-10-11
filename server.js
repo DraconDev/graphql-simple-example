@@ -1,16 +1,17 @@
 ////* Basic setup
-const books = require('./constants/books');
-// import books from './constants/books';
-const express = require('express');
-const { graphqlHTTP } = require('express-graphql');
-const {
+import books from './src/constants/books';
+import BookType from './src/types/bookType';
+
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
+import {
 	GraphQLSchema,
 	GraphQLObjectType,
 	GraphQLString,
 	GraphQLList,
 	GraphQLNonNull,
 	GraphQLInt,
-} = require('graphql');
+} from 'graphql';
 const app = express();
 
 const schema = new GraphQLSchema({
@@ -19,20 +20,6 @@ const schema = new GraphQLSchema({
 		fields: () => ({
 			message: { type: GraphQLString, resolve: () => 'Hello world' },
 		}),
-	}),
-});
-
-const BookType = new GraphQLObjectType({
-	name: 'book',
-	description: 'Description',
-	fields: () => ({
-		author: { type: GraphQLNonNull(GraphQLString) },
-		country: { type: GraphQLNonNull(GraphQLString) },
-		imageLink: { type: GraphQLNonNull(GraphQLString) },
-		link: { type: GraphQLNonNull(GraphQLString) },
-		pages: { type: GraphQLNonNull(GraphQLInt) },
-		title: { type: GraphQLNonNull(GraphQLString) },
-		year: { type: GraphQLNonNull(GraphQLInt) },
 	}),
 });
 
