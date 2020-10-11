@@ -11,6 +11,7 @@ const BookType = new GraphQLObjectType({
 	name: 'book',
 	description: 'Description',
 	fields: () => ({
+		id: { type: GraphQLNonNull(GraphQLInt) },
 		author: { type: GraphQLNonNull(GraphQLString) },
 		country: { type: GraphQLNonNull(GraphQLString) },
 		imageLink: { type: GraphQLNonNull(GraphQLString) },
@@ -22,5 +23,3 @@ const BookType = new GraphQLObjectType({
 });
 
 export default BookType;
-// module.exports = BookType;
-// module.exports = BookType;

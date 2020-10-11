@@ -6,3 +6,5 @@ const authors = [
 	{ key: 'abraham', givenname: 'Paul', familyname: 'Abraham' },
 	{ key: 'abrahams', givenname: 'Paul W.', familyname: 'Abrahams' },
 ];
+
+export default authors;
