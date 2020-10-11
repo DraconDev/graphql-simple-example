@@ -1,4 +1,4 @@
-const books = [
+export const books = [
 	{
 		author: 'Chinua Achebe',
 		country: 'Nigeria',
@@ -132,5 +132,6 @@ const books = [
 	},
 ];
 
-module.exports = books;
-// export default books;
+// module.exports = books;
+
+export default books;

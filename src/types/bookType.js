@@ -1,11 +1,11 @@
-const {
+import {
 	GraphQLSchema,
 	GraphQLObjectType,
 	GraphQLString,
 	GraphQLList,
 	GraphQLNonNull,
 	GraphQLInt,
-} = require('graphql');
+} from 'graphql';
 
 const BookType = new GraphQLObjectType({
 	name: 'book',
@@ -21,4 +21,6 @@ const BookType = new GraphQLObjectType({
 	}),
 });
 
-module.exports = BookType;
+export default BookType;
+// module.exports = BookType;
+// module.exports = BookType;

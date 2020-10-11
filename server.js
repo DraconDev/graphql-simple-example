@@ -1,9 +1,9 @@
 ////* Basic setup
-import books from './src/constants/books';
-import BookType from './src/types/bookType';
-
+import books from './src/constants/books.js';
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
+
+import BookType from './src/types/bookType.js';
 import {
 	GraphQLSchema,
 	GraphQLObjectType,
@@ -12,6 +12,7 @@ import {
 	GraphQLNonNull,
 	GraphQLInt,
 } from 'graphql';
+
 const app = express();
 
 const schema = new GraphQLSchema({
